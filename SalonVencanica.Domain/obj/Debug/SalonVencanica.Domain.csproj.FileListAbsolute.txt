@@ -1,0 +1,11 @@
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\SalonVencanica.Domain.dll.config
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\SalonVencanica.Domain.dll
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\SalonVencanica.Domain.pdb
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\EntityFramework.dll
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\EntityFramework.xml
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.csproj.CoreCompileInputs.cache
+C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.csproj.CopyComplete
+C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.dll
+C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.pdb
