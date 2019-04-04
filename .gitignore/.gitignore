@@ -1,7 +1,0 @@
-*.lref
-*/bin/
-*/obj/
-*.cache
-*.Cache
-*.csproj
-*.config
