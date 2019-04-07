@@ -18,18 +18,27 @@ namespace SalonVencanica.WebUI.Controllers
             this.repo = repo;
         } 
         
-        public ViewResult List(int page = 1)
+        public ViewResult List(string category, int page = 1)
         {
             ProductsListViewModel model = new ProductsListViewModel()
             {
-                Products = repo.Products.OrderBy(p => p.ProductId).Skip((page - 1) * pageSize).Take(pageSize),
+                Products = repo.Products
+                .Where(p => category == null || p.Category == category)
+                .OrderBy(p => p.ProductId)
+                .Skip((page - 1) * pageSize)
+                .Take(pageSize),
 
                 PagingInfo = new PagingInfo()
                 {
                     CurrentPage = page,
                     ItemsPerPage = pageSize,
-                    TotalItems = repo.Products.Count()
-                }
+                    //TotalItems = repo.Products.Count()
+
+                    TotalItems = category == null ? repo.Products.Count() : repo.Products.Where(p => p.Category == category).Count()
+
+                },
+
+                CurrentCategory = category
             };
 
             return View(model);
