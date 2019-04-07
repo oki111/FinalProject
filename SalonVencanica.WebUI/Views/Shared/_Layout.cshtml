@@ -1,13 +1,33 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - Salon Vencanica</title>
-</head>
+    <head>
 
-<body>
-   @RenderBody()
-</body>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@ViewBag.Title - Salon Vencanica</title>
+        <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+        <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-inverse" role="navigation">
+            <a class="navbar-brand" href="#">Salon Vencanica</a>
+        </div>
+
+        <div class="row">
+
+            <div id="categories" class="col-lg-3">
+                Categories
+            </div>
+
+            <div class="col-lg-7">
+                @RenderBody()
+            </div>
+
+        </div>
+
+  
+    </body>
 
 </html>

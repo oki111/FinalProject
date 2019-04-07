@@ -66,6 +66,7 @@ namespace SalonVencanica.WebUI.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<IProductRepository>().To<EFProductRepository>();
+
             //Mock<IProductRepository> mock = new Mock<IProductRepository>();
             //mock.Setup(m => m.Products).Returns(new List<Product> { new Product { Name = "Football", Price = 23 }, new Product { Name = "Surf board", Price = 179 }, new Product { Name = "Running shoes", Price = 95 } });
             //kernel.Bind<IProductRepository>().ToConstant(mock.Object);

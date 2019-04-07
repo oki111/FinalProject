@@ -13,6 +13,13 @@ namespace SalonVencanica.WebUI
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            //lets change '?page=1' to 'page1' so add this routing configuration like this
+            routes.MapRoute(
+                           name: null,
+                           url: "Page{page}",
+                           defaults: new { controller = "Product", action = "List" }
+            );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
