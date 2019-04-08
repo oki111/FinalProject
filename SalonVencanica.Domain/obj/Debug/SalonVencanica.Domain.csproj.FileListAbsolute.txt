@@ -9,4 +9,3 @@ C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.csproj.Cor
 C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.csproj.CopyComplete
 C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.dll
 C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.pdb
-C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.csprojAssemblyReference.cache
