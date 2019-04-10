@@ -1,10 +1,11 @@
-.vs/SalonVencanica/v15/Server/sqlite3/db.lock
-.vs/SalonVencanica/v15/.suo
-SalonVencanica.Domain/obj/Debug/SalonVencanica.Domain.csproj.FileListAbsolute.txt
-SalonVencanica.Domain/obj/Debug/SalonVencanica.Domain.csprojAssemblyReference.cache
-SalonVencanica.WebUI/bin/SalonVencanica.WebUI.dll
-SalonVencanica.WebUI/bin/SalonVencanica.WebUI.pdb
-SalonVencanica.WebUI/obj/Debug/SalonVencanica.WebUI.csprojAssemblyReference.cache
-SalonVencanica.WebUI/obj/Debug/SalonVencanica.WebUI.dll
-SalonVencanica.WebUI/obj/Debug/SalonVencanica.WebUI.pdb
+FinalProject/.vs/SalonVencanica/v15/.suo
+FinalProject/SalonVencanica.Domain/obj/Debug/SalonVencanica.Domain.csproj.FileListAbsolute.txt
+FinalProject/SalonVencanica.Domain/obj/Debug/SalonVencanica.Domain.csprojAssemblyReference.cache
+FinalProject/SalonVencanica.WebUI/bin/SalonVencanica.WebUI.dll
+FinalProject/SalonVencanica.WebUI/bin/SalonVencanica.WebUI.pdb
+FinalProject/SalonVencanica.WebUI/obj/Debug/SalonVencanica.WebUI.csprojAssemblyReference.cache
+FinalProject/SalonVencanica.WebUI/obj/Debug/SalonVencanica.WebUI.dll
+FinalProject/SalonVencanica.WebUI/obj/Debug/SalonVencanica.WebUI.pdb
+
+FinalProject/.vs/SalonVencanica/v15/Server/sqlite3/db.lock
 

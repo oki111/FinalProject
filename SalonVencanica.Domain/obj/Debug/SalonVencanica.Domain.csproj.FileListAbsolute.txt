@@ -9,3 +9,17 @@ C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.csproj.Cor
 C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.csproj.CopyComplete
 C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.dll
 C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.pdb
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.Helpers.dll
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.Mvc.dll
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.Razor.dll
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.WebPages.dll
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.WebPages.Razor.dll
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.Helpers.xml
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.Mvc.xml
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.Razor.xml
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.WebPages.xml
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.WebPages.Razor.xml
+C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.csprojAssemblyReference.cache
