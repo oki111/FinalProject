@@ -22,4 +22,5 @@ C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.Razor.xml
 C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.WebPages.xml
 C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.WebPages.Deployment.xml
 C:\FinalProject\SalonVencanica.Domain\bin\Debug\System.Web.WebPages.Razor.xml
-C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.csprojAssemblyReference.cache
+C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.Migrations.initial.resources
+C:\FinalProject\SalonVencanica.Domain\obj\Debug\SalonVencanica.Domain.csproj.GenerateResource.cache

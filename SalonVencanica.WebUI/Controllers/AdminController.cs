@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace SalonVencanica.WebUI.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         IProductRepository repository;
