@@ -65,10 +65,9 @@ namespace SalonVencanica.WebUI.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
+            //ovde frejmwork ninject registruje klase za injekciju u konstruktore kontrolera u kojima su objekti ovh klasa potrebni
             kernel.Bind<IProductRepository>().To<EFProductRepository>();
-
             kernel.Bind<IOrderProcessor>().To<EmailOrderProcessor>();
-
             kernel.Bind<IAuthentication>().To<FormsAuthenticationProvider>();
 
             //Mock<IProductRepository> mock = new Mock<IProductRepository>();

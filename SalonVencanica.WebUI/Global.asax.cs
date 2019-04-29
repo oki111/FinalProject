@@ -13,11 +13,14 @@ namespace SalonVencanica.WebUI
     {
         public IModelBinder CartModelBnder { get; private set; }
 
+        //poziva se automatski kada se pokrene web aplikacija
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
 
+            //ovde vezujemo klasu modela korpe 'Cart' za klasu 'CartModelBinder'
+            //na ovaj nacin, model korpe 'Cart' postaje dostupan kao argument u akcionim funkcijama kontrolera
             ModelBinders.Binders.Add(typeof(Cart), new CartModelBinder());
         }
     }

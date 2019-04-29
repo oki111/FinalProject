@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace SalonVencanica.Domain.Concrete
 {
+    //ova klasa sadrzi unapred zadate postavke za slanje email-a putem smtp servisa
+    //koristi se u klasi 'EmailOrderProcessor'
     public class EmailSettings
     {
         public string MailToAddress = "ialeksan007@gmail.com";

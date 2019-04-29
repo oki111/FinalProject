@@ -5,6 +5,7 @@ namespace SalonVencanica.Domain.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
+    //automatski generisan klasa kao posledica 'Code-first' metode koriscene za generisanje 'Users' tabele u bazi
     internal sealed class Configuration : DbMigrationsConfiguration<SalonVencanica.Domain.Concrete.EFDbContext>
     {
         public Configuration()

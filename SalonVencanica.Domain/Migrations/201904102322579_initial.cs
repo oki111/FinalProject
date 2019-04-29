@@ -2,11 +2,14 @@ namespace SalonVencanica.Domain.Migrations
 {
     using System;
     using System.Data.Entity.Migrations;
-    
+
+    //automatski generisan klasa kao posledica 'Code-first' metode koriscene za generisanje 'Users' tabele u bazi
     public partial class initial : DbMigration
     {
         public override void Up()
         {
+            //kod ispod je zakomentarisan jer tabelu 'Products' vec imamo u bazi na osnovu 'Database first' metode
+
             //CreateTable(
             //    "dbo.Products",
             //    c => new
@@ -19,6 +22,7 @@ namespace SalonVencanica.Domain.Migrations
             //        })
             //    .PrimaryKey(t => t.ProductId);
             
+            //ovde se kreira tabela 'Users' u bazi na osnovu unapred zadatog koda
             CreateTable(
                 "dbo.Users",
                 c => new

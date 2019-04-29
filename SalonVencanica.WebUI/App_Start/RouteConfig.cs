@@ -7,8 +7,12 @@ using System.Web.Routing;
 
 namespace SalonVencanica.WebUI
 {
+    //u ovoj klasi se rade postavke za konfiguraciju putanja za akcije kontrolera
+    //postavke koje se ovde nalaze su preuzete sa stackoverflow i ne pamte se
+    //ova klasa se registruje u klasi Global.asax.cs
     public class RouteConfig
     {
+        //poziva se u klasi Global.asax.cs
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
@@ -31,14 +35,20 @@ namespace SalonVencanica.WebUI
                 },
                 new { page = @"\d+" });
 
-            routes.MapRoute(null,
-                "{category}",
-                new { controller = "Product", action = "List", page = 1 }
-                );
+            routes.MapRoute(null, "{category}",
+                new
+                {
+                    controller = "Product",
+                    action = "List",
+                    page = 1
+                });
 
-            routes.MapRoute(null,
-                "{category}/Page{page}",
-                new { controller = "Product", action = "List" },
+            routes.MapRoute(null, "{category}/Page{page}",
+                new
+                {
+                    controller = "Product",
+                    action = "List"
+                },
                 new { page = @"\d+" }
                 );
 
