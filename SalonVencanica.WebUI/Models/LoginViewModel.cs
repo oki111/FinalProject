@@ -13,13 +13,13 @@ namespace SalonVencanica.WebUI.Models
         //ime administratora
         //pristupa mu se u klasi AccountController
         //setuje ga korisnik u browseru
-        [Required(ErrorMessage = "Username is required")]
+        [Required(ErrorMessage = "Korisnicko ime je obavezno")]
         public string UserName { get; set; }
 
         //sifra administratora
         //pristupa mu se u klasi AccountController
         //setuje ga korisnik u browseru
-        [Required(ErrorMessage = "Password is required")]
+        [Required(ErrorMessage = "Sifra je obavezna")]
         [StringLength(50, MinimumLength = 6)]
         public string Password { get; set; }
     }

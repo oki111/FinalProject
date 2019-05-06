@@ -10,7 +10,6 @@ namespace SalonVencanica.Domain.Concrete
     //koristi se u klasi 'EmailOrderProcessor'
     public class EmailSettings
     {
-        public string MailToAddress = "ialeksan007@gmail.com";
         public string MailFromAddress = "ialeksan007@gmail.com";
         public bool UseSsl = true;
         public string Username = "ialeksan007@gmail.com";

@@ -15,33 +15,38 @@ namespace SalonVencanica.Domain.Entities
         //ovi atributi se aktiviraju kada se aplikacija pokrene
 
         //pristupa mu se u klasi EmailOrderProcessor, setuje ga korisnik u browseru
-        [Required(ErrorMessage = "Please enter a name")]
+        [Required(ErrorMessage = "Molimo unesite ime")]
         public string Name { get; set; }
 
         //pristupa mu se u klasi EmailOrderProcessor, setuje ga korisnik u browseru
-        [Required(ErrorMessage = "Please enter the first address line")]
-        public string Line1 { get; set; }
+        [Required(ErrorMessage = "Molimo unesite ulicu i broj")]
+        public string Linija1 { get; set; }
 
         //pristupa mu  se u klasi EmailOrderProcessor, setuje ga korisnik u browseru
-        public string Line2 { get; set; }
+        public string Linija2 { get; set; }
 
         //pristupa mu  se u klasi EmailOrderProcessor, setuje ga korisnik u browseru
-        public string Line3 { get; set; }
+        public string Linija3 { get; set; }
 
         //pristupa mu  se u klasi EmailOrderProcessor, setuje ga korisnik u browseru
-        [Required(ErrorMessage = "Please enter a valid city name")]
-        public string City { get; set; }
+        [Required(ErrorMessage = "Molimo unesite naziv grada")]
+        public string Grad { get; set; }
 
         //pristupa mu  se u klasi EmailOrderProcessor, setuje ga korisnik u browseru
-        [Required(ErrorMessage = "Please enter a valid state name")]
-        public string State { get; set; }
+        [Required(ErrorMessage = "Molimo unesite naziv okruga")]
+        public string Okrug { get; set; }
 
         //pristupa mu se u klasi EmailOrderProcessor, setuje ga korisnik u browseru
-        [Required(ErrorMessage = "Please enter a valid country name")]
-        public string Country { get; set; }
+        [Required(ErrorMessage = "Molimo unesite naziv drzave")]
+        public string Drzava { get; set; }
 
         //pristupa mu se u klasi EmailOrderProcessor, setuje ga korisnik u browseru
-        public string Zip { get; set; }
+        public string PTT { get; set; }
+
+        //pristupa mu se u klasi EmailOrderProcessor, setuje ga korisnik u browseru
+        [Required(ErrorMessage = "Molimo unesite ispravan email")]
+        [EmailAddress(ErrorMessage = "Uneta adresa nije ispravna")]
+        public string Eposta { get; set; }
 
         //korisiti se u klasi EmailOrderProcessor, setuje ga korisnik u browseru
         public bool GiftWrap { get; set; }

@@ -20,20 +20,20 @@ namespace SalonVencanica.Domain.Entities
         public int ProductId { get; set; }
 
         //pristupa mu se u klasama EFProductRepository, EmailOrderProcessor, AdminController a setuje se samo u EFProductRepository
-        [Required(ErrorMessage = "Please enter a product name.")]
+        [Required(ErrorMessage = "Molimo unesite naziv proizvoda.")]
         public string Name { get; set; }
 
         //setuje se i pristupa mu se u klasi EFProductRepository
-        [Required(ErrorMessage = "Please enter a description.")]
+        [Required(ErrorMessage = "Molimo unesite opis.")]
         public string Description { get; set; }
 
         //korsiti se u klasama EFProductRepository, Cart, EmailOrderProcessor, a setuje se samo u EFProductRepository
         [Required]
-        [Range(0.01, double.MaxValue, ErrorMessage = "Please enter a positive price.")]
+        [Range(0.01, double.MaxValue, ErrorMessage = "Molimo unesite pozitivnu cenu.")]
         public decimal Price { get; set; }
 
         //korsiti se u klasama EFProductRepository, ProductController, NavController, a setuje se samo u EFProductRepository
-        [Required(ErrorMessage = "Category is required.")]
+        [Required(ErrorMessage = "Kategorija je obavezna.")]
         public string Category { get; set; }
     }
 }

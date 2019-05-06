@@ -43,34 +43,35 @@ namespace SalonVencanica.Domain.Concrete
 
                 //string-builder objekat koji prikazuje korisniku podatke od uspesne narudzbenice
                 StringBuilder body = new StringBuilder()
-                    .AppendLine("A new order has been submitted")
+                    .AppendLine("Nova narudzbina je uspesno poslata")
                     .AppendLine("---")
-                    .AppendLine("Items:");
+                    .AppendLine("Artikli:");
 
                 //ovde dodjaemo ukupnu vrednost i broj artikala u korpi u specificnom formatu
                 foreach (var line in cart.Lines)
                 {
                     var subtotal = line.Product.Price * line.Quantity;
-                    body.AppendFormat("{0}x{1})(subtotal:{2:c})\n", line.Quantity, line.Product.Name, subtotal);
+                    body.AppendFormat("{0}x{1})(ukupno:{2:c})\n", line.Quantity, line.Product.Name, subtotal);
                 }
 
                 //ovde dodajemo podatke o adresi za slanje kao sto su ime, ulica, grad, drzava, postanski broj i opciju za poklon pakovanje
-                body.AppendFormat("Total order value:{0:c}", cart.ComputeTotalValue())
+                body.AppendFormat("Ukupna vrednost porudzbine:{0:c}", cart.ComputeTotalValue())
                     .AppendLine("---")
-                    .AppendLine("Ship to:")
+                    .AppendLine("Poslati na:")
                     .AppendLine(shippingInfo.Name)
-                    .AppendLine(shippingInfo.Line1)
-                    .AppendLine(shippingInfo.Line2 ?? "")
-                    .AppendLine(shippingInfo.Line3 ?? "")
-                    .AppendLine(shippingInfo.City)
-                    .AppendLine(shippingInfo.State ?? "")
-                    .AppendLine(shippingInfo.Country)
-                    .AppendLine(shippingInfo.Zip)
+                    .AppendLine(shippingInfo.Linija1)
+                    .AppendLine(shippingInfo.Linija2 ?? "")
+                    .AppendLine(shippingInfo.Linija3 ?? "")
+                    .AppendLine(shippingInfo.Grad)
+                    .AppendLine(shippingInfo.Okrug ?? "")
+                    .AppendLine(shippingInfo.Drzava)
+                    .AppendLine(shippingInfo.PTT)
+                    .AppendLine(shippingInfo.Eposta)
                     .AppendLine("---")
-                    .AppendFormat("Gift wrap: {0}", shippingInfo.GiftWrap ? "Yes" : "No");
+                    .AppendFormat("Ukrasno pakovanje: {0}", shippingInfo.GiftWrap ? "Da" : "Ne");
 
                 //ovde instanciramo objekat email poruke i prosledjujemo mu upravo kreirani tekstualni objekat, email adresu sa koje se salje i adresu na koju se salje
-                MailMessage mailMesage = new MailMessage(emailSettings.MailFromAddress, emailSettings.MailToAddress, "New order Submitted!", body.ToString());
+                MailMessage mailMesage = new MailMessage(emailSettings.MailFromAddress, shippingInfo.Eposta, "Nova porudzbina je poslata!", body.ToString());
 
                 //ovde putem smtp klijenta saljemo upravo kreirani email objekat
                 smtpClient.Send(mailMesage);

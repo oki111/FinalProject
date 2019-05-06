@@ -53,7 +53,7 @@ namespace SalonVencanica.WebUI.Controllers
             if (cart.Lines.Count() == 0)
             {
                 //upisujemo u dictionary poruku da je korpa prazna
-                ModelState.AddModelError("", "Sorry, your cart is empty!");
+                ModelState.AddModelError("", "Izvinite, vasa korpa je prazna!");
             }
 
             //ako je stanje modela validno

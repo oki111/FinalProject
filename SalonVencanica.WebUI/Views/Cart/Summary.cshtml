@@ -1,12 +1,12 @@
 ﻿@model SalonVencanica.Domain.Entities.Cart
 
 <div class="navbar-right">
-    @Html.ActionLink("Checkout", "index", "Cart", new { returnUrl = Request.Url.PathAndQuery }, new { @class = "btn btn-default navbar-btn" })
+    @Html.ActionLink("Na korpu", "index", "Cart", new { returnUrl = Request.Url.PathAndQuery }, new { @class = "btn btn-default navbar-btn" })
 </div>
 
 <div class="navbar-text navbar-right">
-    <b>Your cart:</b>
-    @Model.Lines.Sum(x => x.Quantity) item(s),
+    <b>Vasa korpa:</b>
+    @Model.Lines.Sum(x => x.Quantity) artikal(a),
     @Model.ComputeTotalValue().ToString("c")
 </div>
 

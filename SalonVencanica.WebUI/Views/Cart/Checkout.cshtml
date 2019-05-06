@@ -1,27 +1,27 @@
 ﻿@model SalonVencanica.Domain.Entities.ShippingDetails
 
 @{
-    ViewBag.Title = "Online Shopping Store: Checkout";
+    ViewBag.Title = "Salon Vencanica: Korpa";
 }
 
-<h2>Check out now</h2>
-<p>Please enter your details, and we'll ship your goods right away!</p>
+<h2>Poruci sad</h2>
+<p>Molimo unesite vase podatke, vasi artikli ce biti poslati odmah!</p>
 
 @using (Html.BeginForm())
 {
     @Html.ValidationSummary()
 
-    <h3>Ship to</h3>
+    <h3>Posalji na</h3>
 
 
     <div class="form-group">
-        <label>Name:</label>
+        <label>Ime:</label>
         @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
     </div>
 
-    <h3>Address</h3>
+    <h3>Adresa</h3>
     
-    <h3>Options</h3>
+    <h3>Opcije</h3>
     
     foreach (var property in ViewData.ModelMetadata.Properties)
     {
@@ -37,12 +37,12 @@
     <div class="checkbox">
         <label>
             @Html.EditorFor(x => x.GiftWrap)
-            Gift wrap these items
+            Ukrasno pakovanje
         </label>
     </div>
 
     <div class="text-center">
-        <input class="btn btn-primary" type="submit" value="Complete order" />
+        <input class="btn btn-primary" type="submit" value="Zavrsite porudzbinu" />
     </div>
 
 

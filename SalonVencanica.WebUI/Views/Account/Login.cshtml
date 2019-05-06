@@ -7,25 +7,25 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-        <h3>Log In></h3>
+        <h3>Logovanje></h3>
     </div>
 
     <div class="panel-body">
         <p class="lead">
-            Please log in to access the administration area:
+            Molimo Vas ulogujte se da pristupite administratorskoj sekciji:
         </p>
         @using (Html.BeginForm())
         {
             @Html.ValidationSummary()
             <div class="form-group">
-                <label>Use Name:</label>
+                <label>Korisnicko ime:</label>
                 @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
             </div>
             <div class="form-group">
-                <label>Password:</label>
+                <label>Sifra:</label>
                 @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
             </div>
-            <input type="submit" value="Log in" class="btn btn-primary" />
+            <input type="submit" value="Logovanje" class="btn btn-primary" />
 
         }
     </div>

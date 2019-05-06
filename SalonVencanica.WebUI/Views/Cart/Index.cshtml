@@ -5,19 +5,19 @@
 </style>
 
 @{
-    ViewBag.title = "Sports Store: Your Cart";
+    ViewBag.title = "Salon Vencanica: Vasa korpa";
 }
 
-<h2>YourCart</h2>
+<h2>Vasa korpa</h2>
 
 <table id="caetTable" class="table">
 
     <thead>
         <tr>
-            <th>Quantity</th>
-            <th>Item</th>
-            <th class="text-right">Price</th>
-            <th class="text-right">Subtotal</th>
+            <th>Kolicina</th>
+            <th>Artikal</th>
+            <th class="text-right">Cena</th>
+            <th class="text-right">Ukupno</th>
         </tr>
     </thead>
 
@@ -38,7 +38,7 @@
                 {
                     @Html.Hidden("ProductId", line.Product.ProductId)
                     @Html.HiddenFor(x => x.ReturnUrl)
-                    <input class="btn btn-sm btn-warning" type="submit" value="Remove" />
+                    <input class="btn btn-sm btn-warning" type="submit" value="Ukloni" />
                 }
             </td>
         </tr>
@@ -56,6 +56,6 @@
 </table>
 
 <div class="text-center">
-    <a class="btn btn-primary" href="@Model.ReturnUrl">Continue shopping</a>
-    @Html.ActionLink("Checkout now", "Checkout", null, new { @class = "btn btn-primary" })
+    <a class="btn btn-primary" href="@Model.ReturnUrl">Nastavi kupovinu</a>
+    @Html.ActionLink("Kupi sad", "Checkout", null, new { @class = "btn btn-primary" })
 </div>
