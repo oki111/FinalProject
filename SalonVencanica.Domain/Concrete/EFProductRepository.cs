@@ -1,10 +1,6 @@
 ﻿using SalonVencanica.Domain.Abstract;
 using SalonVencanica.Domain.Entities;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SalonVencanica.Domain.Concrete
 {
@@ -42,6 +38,9 @@ namespace SalonVencanica.Domain.Concrete
                     dbEntry.Description = product.Description;
                     dbEntry.Price = product.Price;
                     dbEntry.Category = product.Category;
+
+                    dbEntry.ImagePath = product.ImagePath;
+                    
                 }
 
 
@@ -51,6 +50,7 @@ namespace SalonVencanica.Domain.Concrete
             context.SaveChanges();
         }
 
+        
         //ova funkcija brise Produkt objekte iz baze na osnovu zadatog ProductId
         //poziva se u klasama: EFProductRepository i AdminController
         public Product DeleteProduct(int productId)

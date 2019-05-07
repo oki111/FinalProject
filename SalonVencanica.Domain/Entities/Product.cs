@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Web.Mvc;
 
 namespace SalonVencanica.Domain.Entities
@@ -35,5 +37,9 @@ namespace SalonVencanica.Domain.Entities
         //korsiti se u klasama EFProductRepository, ProductController, NavController, a setuje se samo u EFProductRepository
         [Required(ErrorMessage = "Kategorija je obavezna.")]
         public string Category { get; set; }
+
+        [Required(ErrorMessage = "Slika je obavezna.")]
+        public string ImagePath { get; set; }
+
     }
 }

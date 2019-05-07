@@ -7,12 +7,15 @@
         <span class="pull-right label label-primary">@Model.Price.ToString("c")</span>
     </h3>
 
+    <img src="@Url.Content(Model.ImagePath)" height="170" onclick="javascript:window.open('@Url.Content(Model.ImagePath)');" onmouseover="" style="cursor: pointer;"/>
+   
+
     @using (Html.BeginForm("AddToCart", "Cart"))
     {
         <div class="pull-right">
             @Html.HiddenFor(x => x.ProductId)
             @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-            <input type="submit" class="btn btn-success" value="Dodaj u korpu"/>
+            <input type="submit" class="btn btn-success" value="Dodaj u korpu" />
         </div>
     }
 

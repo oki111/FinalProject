@@ -14,6 +14,7 @@
         <table class="table table-stripped table-condensed table-bordered">
             <tr>
                 <th class="text-right">Redni broj</th>
+                <th class="text-right">Slika</th>
                 <th>Naziv</th>
                 <th class="text-right">Cena</th>
                 <th class="text-right">Akcija</th>
@@ -22,6 +23,9 @@
             {
                 <tr>
                     <td class="text-right">@item.ProductId</td>
+                    <td>
+                        <img src="@Url.Content(item.ImagePath)" height="60"/>
+                    </td>
                     <td>@Html.ActionLink(item.Name, "Edit", new { item.ProductId })</td>
                     <td class="text-right">@item.Price.ToString("c")</td>
                     <td class="text-center">

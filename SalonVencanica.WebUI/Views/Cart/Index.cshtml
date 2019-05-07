@@ -16,6 +16,7 @@
         <tr>
             <th>Kolicina</th>
             <th>Artikal</th>
+            <th>Slika</th>
             <th class="text-right">Cena</th>
             <th class="text-right">Ukupno</th>
         </tr>
@@ -27,6 +28,9 @@
         <tr>
             <td class="text-center">@line.Quantity</td>
             <td class="text-left">@line.Product.Name</td>
+            <td>
+                <img src="@Url.Content(line.Product.ImagePath)" height="60"/>
+            </td>
             <td class="text-right">
                 @line.Product.Price.ToString("c")
             </td>

@@ -2,6 +2,7 @@
 using SalonVencanica.Domain.Entities;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -39,16 +40,19 @@ namespace SalonVencanica.WebUI.Controllers
         //ova 'http-post' funkcija redirektuje korisnika na View gde ce biti prikazani Produkt-i iz baze nakon unosa novog Produkta
         //ova funkcija dakle upisuje u bazu podatke novog Produkt-a koji je unet preko browser-a od strane administratora
         [HttpPost]
-        public ActionResult Create(Product product)
+        public ActionResult Create(Product product, HttpPostedFileBase ImagePath)
         {
             //ako je stanje modela validno
             if (ModelState.IsValid)
             {
+                //cuvamo fajl slike na server
+                SaveImageToServer(product, ImagePath);
+
                 //upisujemo novi Produkt model u bazu
                 repository.SaveProduct(product);
 
                 //upisujemo u Dictionary poruku da je Produkt uspesno sacuvan u bazi
-                TempData["message"] = string.Format("{0} Has been saved", product.Name);
+                TempData["message"] = string.Format("{0} artikal je uspesno upisan u bazu", product.Name);
 
                 //vracamo ka browseru view koji ce da sadrzi azuriran spisak Produkt-a iz baze
                 return RedirectToAction("Index");
@@ -75,16 +79,19 @@ namespace SalonVencanica.WebUI.Controllers
         //ova 'http-post' funkcija redirektuje korisnika na View gde ce biti prikazani Produkt-i iz baze nakon uspesne izmene podataka odredjenog Produkta
         //ova funkcija dakle upisuje u bazu nove podatke odredjenog Produkt-a koji su uneti preko browser-a od strane administratora
         [HttpPost]
-        public ActionResult Edit(Product product)
+        public ActionResult Edit(Product product, HttpPostedFileBase ImagePath)
         {
             //ako je stanje modela validno
             if (ModelState.IsValid)
             {
+                //cuvamo fajl slike na server
+                SaveImageToServer(product, ImagePath);
+
                 //upisujemo izmenjene podatke odabranog Produkt-a u bazu
                 repository.SaveProduct(product);
 
                 //upisujemo u Dictionary poruku da je Produkt uspesno sacuvan u bazi
-                TempData["message"] = string.Format("{0} Has been saved", product.Name);
+                TempData["message"] = string.Format("{0} artikal je uspesno izmenjen u bazi", product.Name);
 
                 //vracamo ka browseru view koji ce da sadrzi azuriran spisak Produkt-a iz baze
                 return RedirectToAction("Index");
@@ -98,6 +105,29 @@ namespace SalonVencanica.WebUI.Controllers
             }
         }
 
+        //ova funkcija cuva sliku produkta na server
+        private void SaveImageToServer(Product product, HttpPostedFileBase ImagePath)
+        {
+            //ako je putanja slike ok
+            if (ImagePath.FileName != "")
+            {
+                //cuvamo samo relativnu putanju
+                product.ImagePath = "~/Images/" + Path.GetFileName(ImagePath.FileName);
+
+                //absolutna putanja na serveru za upload
+                string serverPath = Server.MapPath(product.ImagePath);
+
+                //upload slike ne server
+                ImagePath.SaveAs(serverPath);
+            }
+
+            else
+            {
+                product.ImagePath = "";
+            }
+
+        }
+
         //ova 'http-post' funkcija redirektuje korisnika na View gde ce biti prikazani Produkt-i iz baze nakon uspesnog brisanja odabranog Produkta
         //ova funkcija dakle brise i baze odredjeni Produkt koji je odabran od strane administratora
         [HttpPost]
@@ -109,12 +139,26 @@ namespace SalonVencanica.WebUI.Controllers
             //ako je Produkt uspeno obrisan
             if (deleteProduct != null)
             {
+                //brisemo sliku sa servera
+                DeleteImageFromServer(deleteProduct);
+
                 //upisujemo u Dictionary poruku da je Produkt uspesno obrisan iz baze
-                TempData["message"] = string.Format("{0} Has been deleted", deleteProduct.Name);
+                TempData["message"] = string.Format("{0} artikal je uspesno obrisan iz baze", deleteProduct.Name);
             }
 
             //vracamo ka browseru view koji ce da sadrzi azuriran spisak Produkt-a iz baze
             return RedirectToAction("Index");
+        }
+
+        //ova funkcija brise fajl slike produkta koji je obrisan sa servera
+        private void DeleteImageFromServer(Product product)
+        {
+            //absolutna putanja slike produkta za brisanje na serveru
+            string serverPath = Server.MapPath(product.ImagePath);
+
+            //brisanje slike obrisanog produkta sa servera
+            if (System.IO.File.Exists(serverPath))
+                System.IO.File.Delete(serverPath);
         }
     }
 }
