@@ -11,33 +11,33 @@
     <link rel="shortcut icon" href="Images/_favicon.ico" type="image/x-icon" />
 </head>
 
-    <body>
+<body style="background: #999966">
 
-        <div class="navbar navbar-inverse" role="navigation">
-            <a class="navbar-brand" href="#">
-                <span class="hidden-xs">Salon Vencanica</span>
-                <div class="visible-xs">Salon</div>
-                <div class="visible-xs">Vencanica</div>
-                @Html.Action("Summary", "Cart");
-            </a>
-            <a class="navbar-brand" href="#">
-                @Html.ActionLink("Logovanje Administratora", "Index", "Admin")
-            </a>
+    <div class="navbar navbar-inverse" role="navigation">
+        <a class="navbar-brand" href="#">
+            <span class="hidden-xs">Salon Vencanica</span>
+            <div class="visible-xs">Salon</div>
+            <div class="visible-xs">Vencanica</div>
+            @Html.Action("Summary", "Cart");
+        </a>
+        <a class="navbar-brand" href="#">
+            @Html.ActionLink("Logovanje Administratora", "Index", "Admin")
+        </a>
+    </div>
+
+    <div class="row">
+
+        <div id="categories" class="col-lg-3">
+            @Html.Action("Menu", "Nav")
         </div>
 
-        <div class="row">
-
-            <div id="categories" class="col-lg-3">
-                @Html.Action("Menu", "Nav")
-            </div>
-
-            <div class="col-lg-7">
-                @RenderBody()
-            </div>
-
+        <div class="col-lg-7">
+            @RenderBody()
         </div>
+
+    </div>
 
   
-    </body>
+</body>
 
 </html>

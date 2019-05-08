@@ -21,12 +21,13 @@
             var userName = HttpContext.Current.User.Identity.Name;
             if (userName != "" && userName != null)
             {
-            <h3>@Html.ActionLink("Salon Vencanica", "List", "Product")
-                <span class="btn-info btn pull-right">
-                   @Html.ActionLink(userName + " - Izloguj se", "Logout", "Account")
-                </span>
-            </h3>
-                
+                <h3>
+                    @Html.ActionLink("Salon Vencanica", "List", "Product")
+                    <span class="btn-info btn pull-right">
+                        @Html.ActionLink(userName + " - Izloguj se", "Logout", "Account")
+                    </span>
+                </h3>
+
             }
         }
 

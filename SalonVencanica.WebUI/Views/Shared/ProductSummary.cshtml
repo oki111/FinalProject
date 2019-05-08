@@ -1,6 +1,6 @@
 ﻿@model SalonVencanica.Domain.Entities.Product
 
-<div class="well">
+<div class="well" style="background: #c9c9c9">
 
     <h3>
         <strong>@Model.Name</strong>
@@ -15,7 +15,7 @@
         <div class="pull-right">
             @Html.HiddenFor(x => x.ProductId)
             @Html.Hidden("returnUrl", Request.Url.PathAndQuery)
-            <input type="submit" class="btn btn-success" value="Dodaj u korpu" />
+            <input type="submit" style="background: #999966" class="btn btn-success" value="Dodaj u korpu" />
         </div>
     }
 
