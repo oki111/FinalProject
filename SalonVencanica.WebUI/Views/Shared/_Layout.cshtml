@@ -15,11 +15,9 @@
 
     <div class="navbar navbar-inverse" role="navigation">
         <a class="navbar-brand" href="#">
-            <span class="hidden-xs">Salon Vencanica</span>
-            <div class="visible-xs">Salon</div>
-            <div class="visible-xs">Vencanica</div>
-            @Html.Action("Summary", "Cart");
+            @Html.ActionLink("Pocetna strana", "Index", "Home");
         </a>
+        <br/>
         <a class="navbar-brand" href="#">
             @Html.ActionLink("Logovanje Administratora", "Index", "Admin")
         </a>

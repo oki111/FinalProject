@@ -1,0 +1,127 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="new 3.css">
+    <script src="new 3.js"></script>
+    <style>
+
+        body {
+            background-color: #999966;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            font-style: italic;
+        }
+
+        p {
+            color: white;
+            font-style: italic;
+            font-size: 20px;
+        }
+
+        div.static {
+            position: static;
+        }
+
+        .static {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .polje {
+            width: 22%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+
+
+        .polje1 {
+            width: 33%;
+            height: 300px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            border: 1px white solid;
+        }
+
+        .static1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Haljine za vencanja i muska odela - Vencanice.net</h1>
+
+    <h1>Dobro dosli!</h1>
+    <h1><span>Veliki izbor vencanica i muskih odela...</span></h1>
+
+    <div style="background: url('../Content/StaticImages/temp-2.jpg') center center no-repeat; margin: 0 0 0 0; height: 170px"></div>
+
+
+    <div class="static1">
+        <div class="polje1" style="background-image:url(../Content/StaticImages/zamena.jpg)"></div>
+        <div class="polje1" style="background-image:url(../Content/StaticImages/naslovna1.jpg)"></div>
+        <div class="polje1" style="background-image:url(../Content/StaticImages/naslovna.jpg)"></div>
+    </div>
+
+
+
+    <div class="row">
+        <div class="large-12 columns">
+            <div class="rich-title super">
+                <div>
+                    <h1>Izdvajamo Vencanice!</h1>
+                    <h1>@Html.ActionLink("Pregledajte nase najtrazenije modele...", "List", "Product")</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="parallax-section half-right-overlay" style="background: #999966  ">
+            <div class="row">
+                <div class="large-6 columns"></div>
+                <div class="large-6 columns">
+                    <div class="text-box">
+                        <div class="rich-title">
+
+                            <p>U našem asortimanu možete naći veliki izbor vencanica i muskih odela. Raspolažmo sa oko 150 modela. Svaki model je unikatan i jedinstven, izrađen od najfinijih prirodnih materijala, različitih su velicina, i u zavisnosti od modela mozete dobiti ukras za kosu, tasnicu ili kravatu. Nasi modeli mogu imati i specijalna ukrasna pakovanja po zelji kupca.</p>
+
+                            <p>Takođe, u našem asortimanu, postoji mogućnost da se skroji model vencanice ili odela po specijalnoj želji.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
