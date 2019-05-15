@@ -1,3 +1,5 @@
+# FinalProject - Salon Vencanica
+
 Izlog stranica sadrzi u centralnom delu listu svih proizvoda iz baze. Lista moze da prikaze maksimalno 4 proizvoda po stranici. Na dnu su numericki linkovi pomocu kojih se moze ici na pojedine stranice ove liste.
 Sa leve strane Izlog stranice su tri linka: Svi proizvodi, Vencanice i Doela. Kada se selektuje Odela, prikazuju se samo proizvodi iz muske kategorije, odnosno ako se selektuje Vencanice, prikazuju se samo iz zenske kategorije. Ako se selektuje Svi proizvodi, prikazuju se proizvodi iz obe kategorije. Takodje, i linkovi stranica na dnu se prikazuju shodno broju stranica proizvoda iz odredjene kategorije.
 
